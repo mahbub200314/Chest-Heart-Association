@@ -1,0 +1,119 @@
+/* hover dropdown */
+.navbar .dropdown:hover .dropdown-menu{
+  display: block;
+  margin-top: 0;
+}
+
+/* smooth animation */
+.dropdown-menu{
+  display: none;
+  border-radius: 6px;
+  border: none;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.dropdown-item:hover{
+  background:#f5f5f5;
+}
+
+.hero-banner{
+  height:600px;
+  background-image: linear-gradient(rgba(26,84,144,0.75), rgba(26,84,144,0.75)),
+  url('./images/heroBanner.jpg');
+
+  background-size: cover;
+  background-position: center;
+}
+
+/* Base state: add transition */
+.conference .hover-shadow {
+  transition: box-shadow 0.3s ease;
+}
+
+/* Hover state: stronger shadow */
+.conference .hover-shadow:hover {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+
+.importantDates .card.transition {
+  transition: all 0.3s ease;
+}
+.importantDates .card.transition:hover {
+  background-color: rgba(255, 255, 255, 0.2) !important;
+  transform: scale(1.05);
+}
+
+
+.scientfic .card{
+    border-left: 4px solid #1a5490 ;
+}
+
+
+
+  /* Hover shadow for cards */
+  .speakers .hover-shadow {
+    transition: all 0.3s ease;
+  }
+  .speakers .hover-shadow:hover {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    transform: translateY(-3px);
+  }
+
+
+  .registration .hover-shadow {
+    transition: all 0.3s ease;
+  }
+  .registration .hover-shadow:hover {
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.2);
+    transform: translateY(-3px);
+  }
+
+    .hover-shadow {
+    transition: all 0.3s ease;
+  }
+.custom-underline {
+  text-decoration: none; 
+  transition: all 0.3s ease;
+}
+
+.custom-underline:hover {
+  text-decoration: underline; 
+}
+
+
+/* sign page css here.......... */
+
+    .tab-btn.active {
+      background-color: #1a5490;
+      color: white;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    .tab-btn {
+      transition: all 0.2s;
+    }
+    .tab-btn:hover:not(.active) {
+      background-color: #f0f0f0;
+    }
+
+    .signbtn .tab-btn{
+        max-width: 500px;
+        width: 100%;
+        padding: 0.8rem;
+        font-size: 1.2rem;
+    }
+    @media(max-width:400px){
+         .signbtn .tab-btn{
+            font-size: 1rem;
+            padding: 0.2rem;
+         }
+    }
+
+
+    .password-wrapper{
+        position: relative;
+    }
+    .toggle-password{
+        position: absolute;
+        top:55%;
+        right: 6%;
+    }
