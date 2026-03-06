@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CHABCON 2026 Dashboard</title>
+  
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  
+  <style>
+    body {
+      background: linear-gradient(135deg, #e3f2fd, #f5f5f5);
+      min-height: 100vh;
+    }
+    .sidebar-btn.active {
+      background-color: #1a5490 !important;
+      color: white !important;
+      border-color: #1a5490 !important;
+    }
+    .card-header-custom {
+      background-color: #1a5490;
+      color: white;
+    }
+    .fee-highlight {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: #1a5490;
+    }
+    .nav-link-custom {
+      color: #495057;
+    }
+    .nav-link-custom:hover,
+    .nav-link-custom.active {
+      color: #1a5490;
+    }
+    .form-section {
+      border-top: 1px solid #dee2e6;
+      padding-top: 1.5rem;
+      margin-top: 1.5rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="bg-white shadow-sm">
+    <div class="container px-4 px-lg-5 py-3">
+      <div class="d-flex flex-wrap align-items-center justify-content-between">
+        <div class="d-flex align-items-center gap-3">
+          
+          <img src="./images/logo.png" alt="CHAB Logo" class="img-fluid" style="height: 64px;">
+          <div>
+            <h1 class="fs-4 fw-bold text-dark m-0">CHABCON 2026 Dashboard</h1>
+            <small class="text-muted">Welcome, Dr. [User Name]</small>
+          </div>
+        </div>
+        <div class="d-flex gap-3">
+          <a href="./index.html" class="btn btn-outline-secondary btn-sm">Home</a>
+          <button class="btn btn-outline-danger btn-sm d-flex align-items-center gap-2">
+            <i class="bi bi-box-arrow-right"></i> Logout
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container px-4 px-lg-5 py-5">
+    <div class="row g-4">
+
+      <!-- Sidebar -->
+      <div class="col-lg-3">
+        <div class="card shadow-sm border-0">
+          <div class="card-body p-4">
+
+            <!-- Navigation Tabs -->
+            <div class="d-grid gap-2 mb-4">
+              <button class="btn bg-light  text-start sidebar-btn p-3 active" data-tab="own">
+                <i class="bi bi-person me-2"></i> Own Registration
+              </button>
+              <button class="btn bg-light text-start sidebar-btn p-3" data-tab="other">
+                <i class="bi bi-people me-2"></i> Other Registration
+              </button>
+              <button class="btn bg-light text-start sidebar-btn p-3" data-tab="foreign">
+                <i class="bi bi-globe me-2"></i> Foreign Registration
+              </button>
+              <button class="btn bg-light text-start sidebar-btn p-3" data-tab="abstract">
+                <i class="bi bi-file-earmark-text me-2"></i> Submit Abstract
+              </button>
+            </div>
+
+            <!-- My Application -->
+            <hr class="my-4">
+            <h6 class="fw-semibold text-muted mb-3">My Application</h6>
+            <div class="table-responsive small">
+              <table class="table table-borderless table-sm">
+                <thead class="table-light">
+                  <tr>
+                    <th>Name</th>
+                    <th>Status</th>
+                    <th>view</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Dr. Sample</td>
+                    <td><span class="text-warning">Pending</span></td>
+                    <td>
+                      <button class="btn btn-sm btn-link text-primary p-0">
+                        <i class="bi bi-eye"></i>
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <!-- My Abstract -->
+            <hr class="my-4">
+            <h6 class="fw-semibold text-muted mb-3">My Abstract</h6>
+            <div class="table-responsive small">
+              <table class="table table-borderless table-sm">
+                <thead class="table-light">
+                  <tr>
+                    <th>Title</th>
+                    <th>Author</th>
+                    <th>view</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td colspan="3" class="text-center text-muted py-3">
+                      No abstracts submitted
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Main Content -->
+      <div class="col-lg-9">
+
+        <!-- Own Registration -->
+        <div id="own" class="tab-content card shadow-sm border-0 active">
+          <div class="card-body p-4 p-lg-5">
+            <h2 class="fw-bold text-dark mb-4">Own Registration</h2>
+
+            <form class="row g-4">
+
+              <!-- Readonly fields -->
+              <div class="col-12">
+                <label class="form-label fw-medium">Name in Full *</label>
+                <input type="text" class="form-control bg-light" readonly value="DR. JOHN DOE">
+              </div>
+
+              <div class="col-12">
+                <label class="form-label fw-medium">Job Title / Designation *</label>
+                <input type="text" class="form-control bg-light" readonly value="Senior Medical Officer">
+              </div>
+
+              <div class="col-12">
+                <label class="form-label fw-medium">Discipline *</label>
+                <input type="text" class="form-control bg-light" readonly value="Respiratory Medicine">
+              </div>
+
+              <div class="col-12">
+                <label class="form-label fw-medium">Address *</label>
+                <textarea class="form-control bg-light" rows="3" readonly>123 Medical Street, Dhaka, Bangladesh</textarea>
+              </div>
+
+              <div class="col-md-6">
+                <label class="form-label fw-medium">Mobile Number *</label>
+                <input type="tel" class="form-control bg-light" readonly value="+880 1XXX-XXXXXX">
+              </div>
+
+              <div class="col-md-6">
+                <label class="form-label fw-medium">Email Address *</label>
+                <input type="email" class="form-control bg-light" readonly value="john.doe@example.com">
+              </div>
+
+              <!-- Editable fields -->
+              <div class="col-12 form-section">
+                <label class="form-label fw-medium">BMDC Registration Number *</label>
+                <input type="text" class="form-control" placeholder="Enter BMDC Registration Number">
+              </div>
+
+              <!-- Category -->
+              <div class="col-12 form-section">
+                <h5 class="fw-semibold">Registration Category & Payment</h5>
+                <div class="d-flex flex-column gap-3 mt-3">
+                  <div class="border rounded p-3 hover-border-primary">
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="category" id="pg" value="postgraduate">
+                      <label class="form-check-label" for="pg">
+                        <strong>Tk. 4,000</strong> – Post Graduate Doctor
+                      </label>
+                    </div>
+                  </div>
+                  <div class="border rounded p-3 hover-border-primary">
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="category" id="trainee" value="trainee">
+                      <label class="form-check-label" for="trainee">
+                        <strong>Tk. 2,000</strong> – Post Graduate Trainee
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Workshop -->
+              <div class="col-12 form-section">
+                <h5 class="fw-semibold">Pre-Conference Workshop – 04-05-2026</h5>
+                <small class="text-danger">(Limited Accommodation)</small>
+                <div class="d-flex flex-column gap-2 mt-3">
+                  <div class="form-check border rounded p-3">
+                    <input class="form-check-input" type="radio" name="workshop" id="w1" value="POCUS of Chest">
+                    <label class="form-check-label" for="w1">POCUS of Chest</label>
+                  </div>
+                  <div class="form-check border rounded p-3">
+                    <input class="form-check-input" type="radio" name="workshop" id="w2" value="Tube Thoracostomy">
+                    <label class="form-check-label" for="w2">Tube Thoracostomy</label>
+                  </div>
+                  <div class="form-check border rounded p-3">
+                    <input class="form-check-input" type="radio" name="workshop" id="w3" value="Research Methodology">
+                    <label class="form-check-label" for="w3">Research Methodology</label>
+                  </div>
+                  <div class="form-check border rounded p-3">
+                    <input class="form-check-input" type="radio" name="workshop" id="none" value="none" checked>
+                    <label class="form-check-label" for="none">None</label>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Summary (will be updated with JS) -->
+              <!-- <div class="col-12 mt-4">
+                <div id="summary-own" class="bg-light border rounded p-4 d-none">
+                  <h5 class="fw-semibold mb-3">Summary</h5>
+                  <div class="d-flex justify-content-between mb-2">
+                    <span>Applicant Type:</span>
+                    <span id="applicant-type-own" class="fw-bold"></span>
+                  </div>
+                  <div class="d-flex justify-content-between mb-2">
+                    <span>Workshop:</span>
+                    <span id="workshop-own" class="fw-bold">Not Selected</span>
+                  </div>
+                  <div class="d-flex justify-content-between border-top pt-3 mt-2">
+                    <span>Registration Fee:</span>
+                    <span id="fee-own" class="fee-highlight"></span>
+                  </div>
+                </div>
+              </div> -->
+
+              <!-- Buttons -->
+              <div class="col-12 mt-4">
+                    <div class="d-flex flex-column flex-sm-row gap-3">
+                        <button 
+                        type="submit" 
+                        class="btn btn-primary flex-grow-1 py-3 fw-semibold"
+                        >
+                        Pay Now
+                        </button>
+                        
+                        <button 
+                        type="button" 
+                        class="btn btn-outline-secondary py-3 fw-semibold flex-grow-1 flex-sm-grow-0 px-sm-5"
+                        >
+                        Save as Draft
+                        </button>
+                    </div>
+                    </div>
+
+            </form>
+          </div>
+        </div>
+
+        <!-- Other tabs placeholders (similar structure) -->
+        <div id="other" class="tab-content card shadow-sm border-0 d-none">
+          <div class="card-body p-5 text-center">
+            <h3>Other Registration Form</h3>
+            <p class="text-muted">Similar structure — all fields are editable</p>
+            <!-- Paste similar form structure here if needed -->
+          </div>
+        </div>
+
+        <div id="foreign" class="tab-content card shadow-sm border-0 d-none">
+          <div class="card-body p-5 text-center">
+            <h3>Foreign Registration</h3>
+            <p class="text-muted">Fixed fee: US $100</p>
+            <!-- Similar structure with dietary requirements etc. -->
+          </div>
+        </div>
+
+        <div id="abstract" class="tab-content card shadow-sm border-0 d-none">
+          <div class="card-body p-5">
+            <h2 class="fw-bold mb-4">Submit Abstract</h2>
+            <form class="row g-4">
+              <div class="col-12">
+                <label class="form-label fw-medium">Title *</label>
+                <input type="text" class="form-control" placeholder="Enter abstract title">
+              </div>
+              <div class="col-12">
+                <label class="form-label fw-medium">Author(s) *</label>
+                <input type="text" class="form-control" placeholder="Enter author name(s)">
+              </div>
+              <div class="col-12">
+                <label class="form-label fw-medium">Keywords *</label>
+                <input type="text" class="form-control" placeholder="comma separated">
+              </div>
+              <div class="col-12">
+                <label class="form-label fw-medium">Abstract * (max 300 words)</label>
+                <textarea class="form-control" rows="10" placeholder="Write your abstract here..."></textarea>
+                <small class="text-muted mt-2 d-block">Maximum 300 words</small>
+              </div>
+                <div class="col-12 mt-4">
+                <div class="d-flex flex-column flex-sm-row gap-3">
+                    <button 
+                    type="submit" 
+                    class="btn btn-primary flex-grow-1 py-3 fw-semibold"
+                    >
+                    Submit Abstract
+                    </button>
+                    
+                    <button 
+                    type="button" 
+                    class="btn btn-outline-secondary py-3 fw-semibold flex-grow-1 flex-sm-grow-0"
+                    >
+                    Save as Draft
+                    </button>
+                </div>
+                </div>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    // Tab switching
+    document.querySelectorAll('.sidebar-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        // Remove active from all buttons
+        document.querySelectorAll('.sidebar-btn').forEach(b => b.classList.remove('active'));
+        // Add active to clicked
+        btn.classList.add('active');
+
+        // Hide all tabs
+        document.querySelectorAll('.tab-content').forEach(tab => tab.classList.add('d-none'));
+        // Show selected tab
+        const tabId = btn.getAttribute('data-tab');
+        document.getElementById(tabId).classList.remove('d-none');
+      });
+    });
+
+    // Simple summary logic for "Own" tab (you can extend for others)
+    const categoryRadios = document.querySelectorAll('input[name="category"]');
+    const workshopRadios = document.querySelectorAll('input[name="workshop"]');
+    const summaryBox = document.getElementById('summary-own');
+    const applicantTypeEl = document.getElementById('applicant-type-own');
+    const workshopEl = document.getElementById('workshop-own');
+    const feeEl = document.getElementById('fee-own');
+
+    function updateSummary() {
+      let fee = "";
+      let type = "";
+
+      const selectedCategory = document.querySelector('input[name="category"]:checked');
+      if (selectedCategory) {
+        if (selectedCategory.value === "postgraduate") {
+          type = "Post Graduate Doctor";
+          fee = "Tk. 4,000";
+        } else if (selectedCategory.value === "trainee") {
+          type = "Post Graduate Trainee";
+          fee = "Tk. 2,000";
+        }
+      }
+
+      const selectedWorkshop = document.querySelector('input[name="workshop"]:checked');
+      const workshopText = selectedWorkshop ? selectedWorkshop.value : "Not Selected";
+
+      if (type) {
+        summaryBox.classList.remove('d-none');
+        applicantTypeEl.textContent = type;
+        workshopEl.textContent = workshopText;
+        feeEl.textContent = fee;
+      } else {
+        summaryBox.classList.add('d-none');
+      }
+    }
+
+    categoryRadios.forEach(r => r.addEventListener('change', updateSummary));
+    workshopRadios.forEach(r => r.addEventListener('change', updateSummary));
+  </script>
+
+</body>
+</html>
