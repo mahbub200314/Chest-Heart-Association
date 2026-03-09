@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Commite</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+
+    <style>
+        .chair-img{
+            width:120px;
+            height:120px;
+            object-fit:cover;
+            margin-top:-60px;
+            border:4px solid white;
+            }
+
+            .card{
+            position:relative;
+            padding-top:80px;
+            }
+
+            /* 3 line clamp */
+
+            .description{
+            display:-webkit-box;
+            -webkit-line-clamp:3;
+            -webkit-box-orient:vertical;
+            overflow:hidden;
+            }
+
+            .description.expand{
+            -webkit-line-clamp:unset;
+            }
+    </style>
+</head>
+<body>
+       <header class="bg-white shadow-sm sticky-top">
+
+        <!-- Top Bar -->
+        <div class="border-bottom">
+            <div class="container py-3 d-flex justify-content-between align-items-center">
+
+                <div class="d-flex align-items-center gap-3">
+
+                    <img src="./images/logo.png" height="60">
+
+                    <div class="border-start ps-3">
+                        <h6 class="mb-0 fw-semibold text-dark">
+                            The Chest & Heart Association of Bangladesh
+                        </h6>
+                    </div>
+
+                </div>
+
+                <div>
+                    <a href="./login.html" class="btn btn-link text-dark">Login</a>
+                    <a href="./signup.html" class="btn text-white" style="background: #1a5490;" > Register </a>
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg" style="background:#1a5490;">
+            <div class="container">
+
+                <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#mainMenu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse justify-content-center" id="mainMenu">
+
+                    <ul class="navbar-nav gap-lg-4">
+
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="/">HOME</a>
+                        </li>
+
+
+                        <!-- ABOUT -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-white" href="#">
+                                ABOUT
+                            </a>
+
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="./aboutChab.html">About CHAB</a></li>
+                                <li><a class="dropdown-item" href="#">Message from President</a></li>
+                                <li><a class="dropdown-item" href="#">Organizing Committee</a></li>
+                                <li><a class="dropdown-item" href="#">Advisory Board</a></li>
+                            </ul>
+                        </li>
+
+
+                        <!-- PROGRAM -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-white" href="#" >
+                                PROGRAM
+                            </a>
+
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Scientific Program</a></li>
+                                <li><a class="dropdown-item" href="#">Schedule at a Glance</a></li>
+                                <li><a class="dropdown-item" href="#">Keynote Speakers</a></li>
+                                <li><a class="dropdown-item" href="#">CME Credits</a></li>
+                            </ul>
+                        </li>
+
+
+                        <!-- REGISTRATION -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-white" href="#" >
+                                REGISTRATION
+                            </a>
+
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Registration Fees</a></li>
+                                <li><a class="dropdown-item" href="#">Online Registration</a></li>
+                                <li><a class="dropdown-item" href="#">Group Registration</a></li>
+                            </ul>
+                        </li>
+
+
+                        <!-- ABSTRACT -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-white" href="#" >
+                                ABSTRACT
+                            </a>
+
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Submission Guidelines</a></li>
+                                <li><a class="dropdown-item" href="#">Important Dates</a></li>
+                                <li><a class="dropdown-item" href="#">Submit Abstract</a></li>
+                            </ul>
+                        </li>
+
+
+                        <!-- VENUE -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-white" href="#" >
+                                VENUE & TRAVEL
+                            </a>
+
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Venue Information</a></li>
+                                <li><a class="dropdown-item" href="#">Accommodation</a></li>
+                                <li><a class="dropdown-item" href="#">Visa Information</a></li>
+                                <li><a class="dropdown-item" href="#">Travel to Dhaka</a></li>
+                            </ul>
+                        </li>
+
+
+                        <!-- SPONSORS -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-white" href="#" >
+                                SPONSORS
+                            </a>
+
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Sponsorship Opportunities</a></li>
+                                <li><a class="dropdown-item" href="#">Our Sponsors</a></li>
+                                <li><a class="dropdown-item" href="#">Become a Sponsor</a></li>
+                            </ul>
+                        </li>
+
+
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="/contact">CONTACT</a>
+                        </li>
+
+
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+
+    </header>
+<!-- navbar end here -->
+
+<section class="py-5">
+  <div class="container">
+
+    <div class="text-center mb-5">
+      <h2 class="fw-bold text-dark">Congress Chairs</h2>
+      <div class="mx-auto mt-3" style="width:100px;height:4px;background:#C92A2A;"></div>
+    </div>
+
+    <div class="row g-5">
+
+      <div class="col-lg-3 col-md-6">
+        <div class="card border-0 shadow-sm text-center p-4">
+
+          <img src="./images/speaker1.jpg"
+            class="rounded-circle mx-auto d-block chair-img"
+            alt="">
+
+          <div class="card-body">
+            <h5 class="card-title">Dr. John Smith</h5>
+
+            <p class="card-text description">
+              Senior cardiologist with extensive experience in cardiovascular
+              disease treatment and research. He has contributed to multiple
+              international medical journals and conferences worldwide.
+            </p>
+
+            <button class="btn btn-sm btn-outline-danger see-more-btn">
+              See More
+            </button>
+
+          </div>
+        </div>
+      </div>
+
+      
+      
+      <div class="col-lg-3 col-md-6">
+        <div class="card border-0 shadow-sm text-center p-4">
+
+          <img src="./images/speaker2.jpg"
+            class="rounded-circle mx-auto d-block chair-img"
+            alt="">
+
+          <div class="card-body">
+            <h5 class="card-title">Dr. John Smith</h5>
+
+            <p class="card-text description">
+              Senior cardiologist with extensive experience in cardiovascular
+              disease treatment and research. He has contributed to multiple
+              international medical journals and conferences worldwide.
+            </p>
+
+            <button class="btn btn-sm btn-outline-danger see-more-btn">
+              See More
+            </button>
+
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col-lg-3 col-md-6">
+        <div class="card border-0 shadow-sm text-center p-4">
+
+          <img src="./images/speaker1.jpg"
+            class="rounded-circle mx-auto d-block chair-img"
+            alt="">
+
+          <div class="card-body">
+            <h5 class="card-title">Dr. John Smith</h5>
+
+            <p class="card-text description">
+              Senior cardiologist with extensive experience in cardiovascular
+              disease treatment and research. He has contributed to multiple
+              international medical journals and conferences worldwide.
+            </p>
+
+            <button class="btn btn-sm btn-outline-danger see-more-btn">
+              See More
+            </button>
+
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col-lg-3 col-md-6">
+        <div class="card border-0 shadow-sm text-center p-4">
+
+          <img src="./images/speaker4.jpg"
+            class="rounded-circle mx-auto d-block chair-img"
+            alt="">
+
+          <div class="card-body">
+            <h5 class="card-title">Dr. John Smith</h5>
+
+            <p class="card-text description">
+              Senior cardiologist with extensive experience in cardiovascular
+              disease treatment and research. He has contributed to multiple
+              international medical journals and conferences worldwide.
+            </p>
+
+            <button class="btn btn-sm btn-outline-danger see-more-btn">
+              See More
+            </button>
+
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col-lg-3 col-md-6">
+        <div class="card border-0 shadow-sm text-center p-4">
+
+          <img src="./images/speaker3.jpg"
+            class="rounded-circle mx-auto d-block chair-img"
+            alt="">
+
+          <div class="card-body">
+            <h5 class="card-title">Dr. John Smith</h5>
+
+            <p class="card-text description">
+              Senior cardiologist with extensive experience in cardiovascular
+              disease treatment and research. He has contributed to multiple
+              international medical journals and conferences worldwide.
+            </p>
+
+            <button class="btn btn-sm btn-outline-danger see-more-btn">
+              See More
+            </button>
+
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col-lg-3 col-md-6">
+        <div class="card border-0 shadow-sm text-center p-4">
+
+          <img src="./images/speaker4.jpg"
+            class="rounded-circle mx-auto d-block chair-img"
+            alt="">
+
+          <div class="card-body">
+            <h5 class="card-title">Dr. John Smith</h5>
+
+            <p class="card-text description">
+              Senior cardiologist with extensive experience in cardiovascular
+              disease treatment and research. He has contributed to multiple
+              international medical journals and conferences worldwide.
+            </p>
+
+            <button class="btn btn-sm btn-outline-danger see-more-btn">
+              See More
+            </button>
+
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col-lg-3 col-md-6">
+        <div class="card border-0 shadow-sm text-center p-4">
+
+          <img src="./images/speaker3.jpg"
+            class="rounded-circle mx-auto d-block chair-img"
+            alt="">
+
+          <div class="card-body">
+            <h5 class="card-title">Dr. John Smith</h5>
+
+            <p class="card-text description">
+              Senior cardiologist with extensive experience in cardiovascular
+              disease treatment and research. He has contributed to multiple
+              international medical journals and conferences worldwide.
+            </p>
+
+            <button class="btn btn-sm btn-outline-danger see-more-btn">
+              See More
+            </button>
+
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col-lg-3 col-md-6">
+        <div class="card border-0 shadow-sm text-center p-4">
+
+          <img src="./images/speaker1.jpg"
+            class="rounded-circle mx-auto d-block chair-img"
+            alt="">
+
+          <div class="card-body">
+            <h5 class="card-title">Dr. John Smith</h5>
+
+            <p class="card-text description">
+              Senior cardiologist with extensive experience in cardiovascular
+              disease treatment and research. He has contributed to multiple
+              international medical journals and conferences worldwide.
+            </p>
+
+            <button class="btn btn-sm btn-outline-danger see-more-btn">
+              See More
+            </button>
+
+          </div>
+        </div>
+      </div>
+
+
+      
+
+    </div>
+  </div>
+</section>
+
+
+ <footer style="background:#2C3E50;" class="text-white">
+
+        <div class="container py-5">
+
+            <div class="row g-4">
+
+                <!-- Logo & About -->
+                <div class="col-md-6">
+
+                    <img src="./images/logo.png" height="80" class="mb-3">
+
+                    <h5 class="fw-semibold">
+                        The Chest & Heart Association of Bangladesh
+                    </h5>
+
+                    <p class="text-light small">
+                        Dedicated to advancing chest and heart healthcare through education,
+                        research, and professional development.
+                    </p>
+
+                </div>
+
+
+                <!-- Contact -->
+                <div class="col-md-3">
+
+                    <h5 class="fw-semibold mb-3">Contact Us</h5>
+
+                    <p class="small text-light mb-2">
+                        <i class="bi bi-geo-alt"></i>
+                        Shahid Abu Sayed International Convention Centre<br>
+                        Dhaka, Bangladesh
+                    </p>
+
+                    <p class="small mb-2">
+                        <i class="bi bi-envelope"></i>
+                        <a href="mailto:info@chestheart.org" class="text-light text-decoration-none">
+                            info@chestheart.org
+                        </a>
+                    </p>
+
+                    <p class="small">
+                        <i class="bi bi-telephone"></i>
+                        <a href="tel:+8801234567890" class="text-light text-decoration-none">
+                            +880 123 456 7890
+                        </a>
+                    </p>
+
+                </div>
+
+
+                <!-- Quick Links -->
+                <div class="col-md-3">
+
+                    <h5 class="fw-semibold mb-3">Quick Links</h5>
+
+                    <ul class="list-unstyled small">
+
+                        <li class="mb-2">
+                            <a href="#" class="text-light text-decoration-none">About CHAB</a>
+                        </li>
+
+                        <li class="mb-2">
+                            <a href="#" class="text-light text-decoration-none">Scientific Program</a>
+                        </li>
+
+                        <li class="mb-2">
+                            <a href="#" class="text-light text-decoration-none">Registration</a>
+                        </li>
+
+                        <li class="mb-2">
+                            <a href="#" class="text-light text-decoration-none">Abstract Submission</a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="text-light text-decoration-none">Contact</a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+
+            <!-- Bottom Footer -->
+
+            <hr class="border-light mt-4">
+
+            <div class="d-md-flex justify-content-between align-items-center">
+
+                <p class="small text-light mb-2 mb-md-0">
+                    © 2026 The Chest & Heart Association of Bangladesh. All rights reserved.
+                </p>
+
+
+                <div>
+
+                    <a href="#" class="text-light me-3 fs-5">
+                        <i class="bi bi-facebook"></i>
+                    </a>
+
+                    <a href="#" class="text-light me-3 fs-5">
+                        <i class="bi bi-twitter"></i>
+                    </a>
+
+                    <a href="#" class="text-light me-3 fs-5">
+                        <i class="bi bi-linkedin"></i>
+                    </a>
+
+                    <a href="#" class="text-light fs-5">
+                        <i class="bi bi-youtube"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+</footer>
+
+<script>
+const buttons = document.querySelectorAll(".see-more-btn");
+
+buttons.forEach(btn => {
+  btn.addEventListener("click", function () {
+
+    const desc = this.previousElementSibling;
+
+    desc.classList.toggle("expand");
+
+    if(desc.classList.contains("expand")){
+      this.innerText = "See Less";
+    }else{
+      this.innerText = "See More";
+    }
+
+  });
+});
+</script>
+
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>   
+</body>
+</html>
